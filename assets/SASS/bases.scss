@@ -1,0 +1,72 @@
+@mixin animation () {
+
+    article.contentone{
+        perspective: 1200px;
+    }
+    
+    article.contentone:hover .main{
+        transform: translateY(366px) rotateX(180deg);  
+    }
+    
+    
+    article.contenttwo{
+        margin-left: 350px;
+        perspective: 800px;
+    }
+    
+    article.contenttwo:hover .main{
+        transform: rotateY(180deg);  
+        transform-origin: 173px;
+    }
+    
+    
+    .main{
+        transition: .6s;
+        transform-style: preserve-3d;
+    }
+    
+    
+    .front, .back{
+        backface-visibility: hidden;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+    
+    
+    .contentone .back{
+        background: rgba(0, 0, 0, 0.411);
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: white;
+        height: 366px;
+        z-index: 2;
+        transform: rotateX(180deg);
+        padding: 10px;
+        text-align: center;
+        width: 346px
+    }
+    
+    
+    .contenttwo .back{
+        background: rgba(0, 0, 0, 0.411);
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: white;
+        height: 366px;
+        z-index: 2;
+        transform: rotateY(180deg);
+        padding: 10px;
+        text-align: center;
+        width: 346px
+    }
+    
+    div#animation{
+        width: 100vw;
+        height: 260px;
+        top: 70%;
+        margin-left: 23%;
+        position: absolute;
+        z-index: 2;
+    }
+}
